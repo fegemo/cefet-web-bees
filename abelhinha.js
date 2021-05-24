@@ -10,6 +10,9 @@ function Abelhinha(tempoAtrasoParaIniciar) {
   this.el.src = 'imgs/abelha-voadora.gif';
   this.el.style.width = LARGURA_ABELHA + 'px';
   this.el.style.position = 'fixed';
+  this.el.style.bottom = '25vh';
+  this.el.style.left = -LARGURA_ABELHA + 'px';
+  this.el.alt = 'Uma abelhinha batendo asas feita em pixel art';
 
   this.el = document.body.appendChild(this.el);
 
@@ -33,9 +36,7 @@ Abelhinha.prototype.posiciona = function(tempoAtrasoParaIniciar) {
   const UM_QUARTO_DA_ALTURA_DA_JANELA = window.innerHeight / 4;
   this.yInicial = Math.random() * (UM_QUARTO_DA_ALTURA_DA_JANELA - ALTURA_ABELHA);
   this.yFinal = Math.random() * (UM_QUARTO_DA_ALTURA_DA_JANELA - ALTURA_ABELHA);
-
   this.el.style.transform = `translate(${this.xInicial}px, ${this.yInicial}px)`;
-  this.el.style.left = -LARGURA_ABELHA + 'px';
 
   // duração da animação: de 3s até 6s (aleatório) 
   this.tempoTrajeto = 3000 + Math.random() * 3000;
@@ -54,7 +55,6 @@ Abelhinha.prototype.atualiza = function(delta) {
   this.y = this.yInicial + this.porcentagemTrajeto * (this.yFinal - this.yInicial) + Math.sin(this.porcentagemTrajeto* 4 * 3.14159) * (4*ALTURA_ABELHA);
   this.y = Math.max(this.y, 0);
   this.el.style.transform = `translate(${this.x}px, ${this.y}px)`;
-  // this.el.style.bottom = `${this.y}px`;
 
   // se concluiu o trajeta (esquerda para direita e saiu da tela),
   // reposiciona a abelha à esquerda e com um novo Y aleatório
