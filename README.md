@@ -32,7 +32,7 @@ está ficando. Se quiser **parar a música**, veja como fazê-lo no [FAQ](#faq).
        mas para `background-image` (slides sobre [gradientes][gradientes])
      - Escolha as cores e a direção do gradiente de forma a deixar a
        **página bonita**, **sem atrapalhar sua legibilidade**
-   - Aumente o tamanho da fonte para algo como `24px`
+   - Aumente o tamanho da fonte para algo como `20px`
    - Coloque uma margem lateral diferente de 0
    - Remova a margem vertical (ie, defina como 0)
      - Isso é necessário porque, por padrão, o `body` tem `margin: 8px`
@@ -98,7 +98,7 @@ arredondadas e com uma bordinha bacana:
   1. Arredonde as bordas mas, em vez de colocar um valor em pixels,
      coloque `50%`
      - Isto fará com que a imagem fique circular 😉
-  1. Coloque uma bordinha marota. Eu usei `3px double goldenrod`
+  1. Coloque uma bordinha marota. Eu usei `5px double COR` sendo que `COR` foi a mesma usada para a borda de `.curiosidade` (exercício anterior)
 
 Agora, vamos colocar a imagem flutuando, para que o texto fique ao redor
 dela. Queremos que, na página das `operarias.html`, a imagem flutue à
@@ -119,9 +119,15 @@ essas novas classes, _e.g._:
 ```css
 .esquerda {
   float: left;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 ```
+
+
+Por fim, se você ficar incomodado com o texto do parágrafo não 
+acompanhar o formato circular da imagem flutuante, há uma propriedade
+do CSS3 que nos permite resolver isso: é a `shape-outside`.
+Veja a página da MDN (Mozilla Developer Network) sobre a [propriedade `shape-outside`][propriedade-shape-outside].
 
 
 ### Exercício 3: Topo da página principal
@@ -134,7 +140,6 @@ e que é usado para agrupar outros elementos e/ou estilização apenas
 Dê um `id` pra ele e estilize-o com:
 - Cor de fundo: branco bem transparente (slides sobre [cores transparentes][cores-transparentes])
 - Sombra de leve: `box-shadow: 4px 4px 4px #0003`
-- Largura: `500px`
 - Espaçamento interno: `30px`
 
 
@@ -176,9 +181,13 @@ Crie a página que está faltando, `rainha.html`, contendo:
 - Título de primeiro nível `Rainha`
 - Imagem `imgs/rainha.png`
 - 1 parágrafo:
-  - A função da rainha é pôr ovos e manter a ordem social na colmeia. A rainha
-    adulta possui quase o dobro do tamanho de uma operária e é a única
-    fêmea fértil da colmeia, apresentando o aparelho reprodutor bem
+  - A função da rainha é pôr ovos e manter a ordem social na colmeia.
+    A larva da rainha é criada num alvéolo modificado, bem maior que os
+    das larvas de operárias e zangões, de formato cilíndrico, denominado
+    realeira, sendo alimentada pelas operárias com a geléia real, produto
+    rico em proteínas, vitaminas e hormônios sexuais. A rainha adulta
+    possui quase o dobro do tamanho de uma operária e é a única fêmea
+    fértil da colmeia, apresentando o aparelho reprodutor bem
     desenvolvido.
 - 1 curiosidade:
   - **Você sabia??** Se nascem duas rainhas ao mesmo tempo, elas
@@ -283,3 +292,5 @@ _Hyperlinks_ podem ser estilizados de maneira diferente em diferentes
 [escolhendo-cores]: https://fegemo.github.io/cefet-front-end/classes/css1/#escolhendo-cores
 [cores-transparentes]: http://fegemo.github.io/cefet-web/classes/css1/#cores-e-gradientes
 [motivo-da-restricao-de-estilizacao-de-hyperlinks]: https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/
+[propriedade-shape-outside]: https://developer.mozilla.org/en-US/docs/Web/CSS/shape-outside
+
