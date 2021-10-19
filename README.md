@@ -286,6 +286,7 @@ _Hyperlinks_ podem ser estilizados de maneira diferente em diferentes
 [id-selector]: https://fegemo.github.io/cefet-web/classes/html2/#seletores-css
 [centering-imgs]: https://fegemo.github.io/cefet-web/classes/html2/#centralizando-imagens
 [seletor-estado]: https://fegemo.github.io/cefet-web/classes/css1/#desafio-seletor-estado
+[seletor-negacao]: https://fegemo.github.io/cefet-web/classes/css1/#desafio-seletor-negacao
 [seletores-atributos]: https://fegemo.github.io/cefet-web/classes/css1/#desafio-seletor-atributo
 [alinhamento-de-texto]: https://fegemo.github.io/cefet-web/classes/html1/#entendendo-estilo-alinhamento-do-texto
 [cancelando-a-flutuacao]: https://fegemo.github.io/cefet-web/classes/css1/#problemas-com-flutuacao
